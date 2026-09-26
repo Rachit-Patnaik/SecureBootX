@@ -1,0 +1,7 @@
+{
+  "policy_name": "SecureBootX Strict Production Policy",
+  "minimum_allowed_version": 1,
+  "require_rsa_verification": true,
+  "enable_measured_boot": true,
+  "root_public_key": "OEM_PRODUCTION_ROOT_PUBLIC_KEY"
+}
