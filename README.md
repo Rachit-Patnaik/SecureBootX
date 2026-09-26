@@ -110,3 +110,14 @@ ctest --output-on-failure
 ```bash
 ./securebootx measure firmware_images/stage1_spl.bin
 ```
+
+---
+
+## Execution Demo & Screenshots
+
+### Verified Boot Sequence & TPM 2.0 PCR Measured Boot Summary
+![Verified Boot Sequence](./docs/screenshots/verified_boot_run.png)
+
+### CLI TPM 2.0 PCR Extension Measurement
+![TPM Measurement CLI](./docs/screenshots/measured_boot_cli.png)
+
