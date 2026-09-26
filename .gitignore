@@ -1,0 +1,18 @@
+# Build directory
+build/
+bin/
+
+# Compiled binaries and logs
+*.o
+*.so
+*.a
+*.log
+*.sig
+*.digest
+
+# Temporary keys and runtime state
+runtime/
+tpm_pcr_state.bin
+
+# Ignore compiled firmware test images if dynamic
+firmware_images/*.signed
