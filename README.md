@@ -26,6 +26,16 @@ SecureBootX is an embedded security framework implemented in modern C++17 design
 
 ---
 
+## Core Security Pillars
+
+| Security Pillar | Technical Implementation | Real-World Application |
+| :--- | :--- | :--- |
+| **1. Verified Boot** *(Static Chain of Trust)* | Verifies the cryptographic signature (`SHA-256` + `RSA-2048`) of each firmware stage (**BootROM ➔ SPL ➔ U-Boot ➔ Kernel**) before execution. If a single byte is tampered with, boot halts immediately. | Standard in **Android (AVB)**, **Apple Secure Enclave**, and **ARM Trusted Firmware**. |
+| **2. Measured Boot** *(TPM 2.0 & Attestation)* | Computes hashes of each boot stage and extends them into **TPM Platform Configuration Registers (PCRs)**: `PCR_new = SHA256(PCR_old \|\| stage_hash)`. | Used by cloud servers and IoT fleets for **Remote Attestation** to verify device health. |
+| **3. Anti-Rollback Protection** | Verifies monotonic version numbers to prevent hackers from flashing older firmware with known security vulnerabilities (Rollback Attacks). | Used in **iOS / Android firmware updates**. |
+
+---
+
 ## Directory Structure
 
 ```text
