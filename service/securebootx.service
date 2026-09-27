@@ -1,0 +1,13 @@
+[Unit]
+Description=SecureBootX Boot Trust Monitor
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/securebootx boot-check
+RemainAfterExit=yes
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
